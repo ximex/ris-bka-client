@@ -1,10 +1,9 @@
-$ = jQuery = require('jquery');
-var bootstrap = require('bootstrap');
+window.$ = window.jQuery = require('jquery');
+require('bootstrap');
 var risBka = require('ris-bka');
 
 $(function() {
   var searchField = $("input[name='search']");
-
 
   searchField.on('keydown', function(event) {
     if (event.which !== 13) { // not pressed enter
@@ -19,9 +18,6 @@ $(function() {
     }, function(error) {
       $('#results').html('version: ' + error);
     });
-
-
-
 
     //$('#results').html('test');
   });
